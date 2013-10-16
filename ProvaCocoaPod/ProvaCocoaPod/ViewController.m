@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <RestKit/RestKit.h>
 
+#import "AppDelegate.h"
+
 @interface ViewController ()
 
 @end
@@ -43,16 +45,14 @@
     /* DEFINIZIONE URL DEL WEBSERVICE REST */
     
     NSURL *baseURL = [NSURL URLWithString:@"https://relifeit.apiary.io"];
-    AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:baseURL];
-    [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
-    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
-    
-    
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
     
     /* CORE DATA */
-    
-    NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ProvaCocoaPod" ofType:@"momd"]];
-    NSManagedObjectModel *managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
+	// Il managed object model e context sono già gestiti dai metodi dichiarati nell'app delegate
+	// quindi qui lo recuperiamo. Sarebbe meglio usare un singleton tipo https://gist.github.com/rojotek/2362546
+	// invece dell'app delegate per metodi relativi a core data.
+	AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
+    NSManagedObjectModel *managedObjectModel = appDelegate.managedObjectModel;
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
     objectManager.managedObjectStore = managedObjectStore;
     
@@ -79,20 +79,20 @@
                                                           @"body"             : @"corpo",
                                                           @"publication_date" : @"dataPubblicazione"}];
     articoliMapping.identificationAttributes = @[@"idArticolo"];
-    
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articoliMapping method:RKRequestMethodGET pathPattern:nil keyPath:@"response" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    [objectManager addResponseDescriptor:responseDescriptor];
-    
-    [objectManager getObjectsAtPath:[NSString stringWithFormat:@"%@%@", [objectManager.baseURL absoluteString], @"/asd"]
-                         parameters:nil
-                            success:^(RKObjectRequestOperation *operaton, RKMappingResult *mappingResult)
-                                    {
-                                        NSLog(@"Mappatura riuscita: %@", mappingResult);
-                                    }
-                            failure:^(RKObjectRequestOperation *operaton, NSError *error)
-                                    {
-                                        NSLog (@"Mappattura FALLITA: %@ \n\nErrore: %@", operaton, error);
-                                    }];
+	
+	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articoliMapping method:RKRequestMethodGET pathPattern:nil keyPath:@"article" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+	[objectManager addResponseDescriptor:responseDescriptor];
+
+	// Preparo operazione con managedObejctContext che permetterà a RestKit di creare una entry in CoreData.
+	// Nota: Il managed object context è inizializzato in AppDelegate con un concurrency type NSMainQueueConcurrencyType
+	// perché RestKit userà [NSManagedObjectContext -performBlockAndWait:]
+	RKManagedObjectRequestOperation *operation = [objectManager managedObjectRequestOperationWithRequest:[NSURLRequest requestWithURL:[objectManager.baseURL URLByAppendingPathComponent:@"/asd"]] managedObjectContext:appDelegate.managedObjectContext success:^(RKObjectRequestOperation *operaton, RKMappingResult *mappingResult) {
+		NSLog(@"Mappatura riuscita: %@", mappingResult);
+	} failure:^(RKObjectRequestOperation *operaton, NSError *error) {
+		NSLog (@"Mappattura FALLITA: %@ \n\nErrore: %@", operaton, error);
+	}];
+	
+	[objectManager enqueueObjectRequestOperation:operation];
 }
 
 @end
