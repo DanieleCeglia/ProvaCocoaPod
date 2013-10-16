@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		640B77DB180C3E510051F5A1 /* Autori.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B77DA180C3E510051F5A1 /* Autori.m */; };
+		640B77DE180C3E520051F5A1 /* Articoli.m in Sources */ = {isa = PBXBuildFile; fileRef = 640B77DD180C3E520051F5A1 /* Articoli.m */; };
+		642F6964180C28E6005232B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6963180C28E6005232B1 /* Foundation.framework */; };
+		642F6966180C28E6005232B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6965180C28E6005232B1 /* CoreGraphics.framework */; };
+		642F6968180C28E6005232B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6967180C28E6005232B1 /* UIKit.framework */; };
+		642F696A180C28E6005232B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6969180C28E6005232B1 /* CoreData.framework */; };
+		642F6970180C28E6005232B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 642F696E180C28E6005232B1 /* InfoPlist.strings */; };
+		642F6972180C28E6005232B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F6971180C28E6005232B1 /* main.m */; };
+		642F6976180C28E6005232B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F6975180C28E6005232B1 /* AppDelegate.m */; };
+		642F6979180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 642F6977180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld */; };
+		642F697B180C28E6005232B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642F697A180C28E6005232B1 /* Images.xcassets */; };
+		642F6982180C28E6005232B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6981180C28E6005232B1 /* XCTest.framework */; };
+		642F6983180C28E6005232B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6963180C28E6005232B1 /* Foundation.framework */; };
+		642F6984180C28E6005232B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6967180C28E6005232B1 /* UIKit.framework */; };
+		642F6985180C28E6005232B1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F6969180C28E6005232B1 /* CoreData.framework */; };
+		642F698D180C28E7005232B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 642F698B180C28E7005232B1 /* InfoPlist.strings */; };
+		642F698F180C28E7005232B1 /* ProvaCocoaPodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F698E180C28E7005232B1 /* ProvaCocoaPodTests.m */; };
+		642F6999180C2A63005232B1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F6998180C2A63005232B1 /* Storyboard.storyboard */; };
+		642F699C180C2B7C005232B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F699B180C2B7C005232B1 /* ViewController.m */; };
+		8C1C854948844421986397F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FC12F66FD14DB7B074F2FD /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		642F6986180C28E6005232B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 642F6958180C28E6005232B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 642F695F180C28E6005232B1;
+			remoteInfo = ProvaCocoaPod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		640B77D9180C3E510051F5A1 /* Autori.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Autori.h; sourceTree = "<group>"; };
+		640B77DA180C3E510051F5A1 /* Autori.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Autori.m; sourceTree = "<group>"; };
+		640B77DC180C3E520051F5A1 /* Articoli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Articoli.h; sourceTree = "<group>"; };
+		640B77DD180C3E520051F5A1 /* Articoli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Articoli.m; sourceTree = "<group>"; };
+		642F6960180C28E6005232B1 /* ProvaCocoaPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvaCocoaPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		642F6963180C28E6005232B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		642F6965180C28E6005232B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		642F6967180C28E6005232B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		642F6969180C28E6005232B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		642F696D180C28E6005232B1 /* ProvaCocoaPod-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProvaCocoaPod-Info.plist"; sourceTree = "<group>"; };
+		642F696F180C28E6005232B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		642F6971180C28E6005232B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		642F6973180C28E6005232B1 /* ProvaCocoaPod-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProvaCocoaPod-Prefix.pch"; sourceTree = "<group>"; };
+		642F6974180C28E6005232B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		642F6975180C28E6005232B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		642F6978180C28E6005232B1 /* ProvaCocoaPod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProvaCocoaPod.xcdatamodel; sourceTree = "<group>"; };
+		642F697A180C28E6005232B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		642F6980180C28E6005232B1 /* ProvaCocoaPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProvaCocoaPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		642F6981180C28E6005232B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		642F698A180C28E7005232B1 /* ProvaCocoaPodTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProvaCocoaPodTests-Info.plist"; sourceTree = "<group>"; };
+		642F698C180C28E7005232B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		642F698E180C28E7005232B1 /* ProvaCocoaPodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvaCocoaPodTests.m; sourceTree = "<group>"; };
+		642F6998180C2A63005232B1 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		642F699A180C2B7C005232B1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		642F699B180C2B7C005232B1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D5FC12F66FD14DB7B074F2FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD42DBBD95A74CD681B91634 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		642F695D180C28E6005232B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642F6966180C28E6005232B1 /* CoreGraphics.framework in Frameworks */,
+				642F696A180C28E6005232B1 /* CoreData.framework in Frameworks */,
+				642F6968180C28E6005232B1 /* UIKit.framework in Frameworks */,
+				642F6964180C28E6005232B1 /* Foundation.framework in Frameworks */,
+				8C1C854948844421986397F9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		642F697D180C28E6005232B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642F6982180C28E6005232B1 /* XCTest.framework in Frameworks */,
+				642F6985180C28E6005232B1 /* CoreData.framework in Frameworks */,
+				642F6984180C28E6005232B1 /* UIKit.framework in Frameworks */,
+				642F6983180C28E6005232B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		642F6957180C28E6005232B1 = {
+			isa = PBXGroup;
+			children = (
+				642F696B180C28E6005232B1 /* ProvaCocoaPod */,
+				642F6988180C28E6005232B1 /* ProvaCocoaPodTests */,
+				642F6962180C28E6005232B1 /* Frameworks */,
+				642F6961180C28E6005232B1 /* Products */,
+				DD42DBBD95A74CD681B91634 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		642F6961180C28E6005232B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				642F6960180C28E6005232B1 /* ProvaCocoaPod.app */,
+				642F6980180C28E6005232B1 /* ProvaCocoaPodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		642F6962180C28E6005232B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				642F6963180C28E6005232B1 /* Foundation.framework */,
+				642F6965180C28E6005232B1 /* CoreGraphics.framework */,
+				642F6967180C28E6005232B1 /* UIKit.framework */,
+				642F6969180C28E6005232B1 /* CoreData.framework */,
+				642F6981180C28E6005232B1 /* XCTest.framework */,
+				D5FC12F66FD14DB7B074F2FD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		642F696B180C28E6005232B1 /* ProvaCocoaPod */ = {
+			isa = PBXGroup;
+			children = (
+				642F6974180C28E6005232B1 /* AppDelegate.h */,
+				642F6975180C28E6005232B1 /* AppDelegate.m */,
+				642F697A180C28E6005232B1 /* Images.xcassets */,
+				642F6977180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld */,
+				642F696C180C28E6005232B1 /* Supporting Files */,
+				642F6998180C2A63005232B1 /* Storyboard.storyboard */,
+				642F699A180C2B7C005232B1 /* ViewController.h */,
+				642F699B180C2B7C005232B1 /* ViewController.m */,
+				640B77DC180C3E520051F5A1 /* Articoli.h */,
+				640B77DD180C3E520051F5A1 /* Articoli.m */,
+				640B77D9180C3E510051F5A1 /* Autori.h */,
+				640B77DA180C3E510051F5A1 /* Autori.m */,
+			);
+			path = ProvaCocoaPod;
+			sourceTree = "<group>";
+		};
+		642F696C180C28E6005232B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				642F696D180C28E6005232B1 /* ProvaCocoaPod-Info.plist */,
+				642F696E180C28E6005232B1 /* InfoPlist.strings */,
+				642F6971180C28E6005232B1 /* main.m */,
+				642F6973180C28E6005232B1 /* ProvaCocoaPod-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		642F6988180C28E6005232B1 /* ProvaCocoaPodTests */ = {
+			isa = PBXGroup;
+			children = (
+				642F698E180C28E7005232B1 /* ProvaCocoaPodTests.m */,
+				642F6989180C28E7005232B1 /* Supporting Files */,
+			);
+			path = ProvaCocoaPodTests;
+			sourceTree = "<group>";
+		};
+		642F6989180C28E7005232B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				642F698A180C28E7005232B1 /* ProvaCocoaPodTests-Info.plist */,
+				642F698B180C28E7005232B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		642F695F180C28E6005232B1 /* ProvaCocoaPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 642F6992180C28E7005232B1 /* Build configuration list for PBXNativeTarget "ProvaCocoaPod" */;
+			buildPhases = (
+				0D0E38E03C73446A81A3E47C /* Check Pods Manifest.lock */,
+				642F695C180C28E6005232B1 /* Sources */,
+				642F695D180C28E6005232B1 /* Frameworks */,
+				642F695E180C28E6005232B1 /* Resources */,
+				97C1674234CC46AD87FFA2B4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProvaCocoaPod;
+			productName = ProvaCocoaPod;
+			productReference = 642F6960180C28E6005232B1 /* ProvaCocoaPod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		642F697F180C28E6005232B1 /* ProvaCocoaPodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 642F6995180C28E7005232B1 /* Build configuration list for PBXNativeTarget "ProvaCocoaPodTests" */;
+			buildPhases = (
+				642F697C180C28E6005232B1 /* Sources */,
+				642F697D180C28E6005232B1 /* Frameworks */,
+				642F697E180C28E6005232B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				642F6987180C28E6005232B1 /* PBXTargetDependency */,
+			);
+			name = ProvaCocoaPodTests;
+			productName = ProvaCocoaPodTests;
+			productReference = 642F6980180C28E6005232B1 /* ProvaCocoaPodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		642F6958180C28E6005232B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Relifeit (Daniele Ceglia)";
+				TargetAttributes = {
+					642F697F180C28E6005232B1 = {
+						TestTargetID = 642F695F180C28E6005232B1;
+					};
+				};
+			};
+			buildConfigurationList = 642F695B180C28E6005232B1 /* Build configuration list for PBXProject "ProvaCocoaPod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 642F6957180C28E6005232B1;
+			productRefGroup = 642F6961180C28E6005232B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				642F695F180C28E6005232B1 /* ProvaCocoaPod */,
+				642F697F180C28E6005232B1 /* ProvaCocoaPodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		642F695E180C28E6005232B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642F6970180C28E6005232B1 /* InfoPlist.strings in Resources */,
+				642F697B180C28E6005232B1 /* Images.xcassets in Resources */,
+				642F6999180C2A63005232B1 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		642F697E180C28E6005232B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642F698D180C28E7005232B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D0E38E03C73446A81A3E47C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97C1674234CC46AD87FFA2B4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		642F695C180C28E6005232B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640B77DE180C3E520051F5A1 /* Articoli.m in Sources */,
+				640B77DB180C3E510051F5A1 /* Autori.m in Sources */,
+				642F6976180C28E6005232B1 /* AppDelegate.m in Sources */,
+				642F6972180C28E6005232B1 /* main.m in Sources */,
+				642F699C180C2B7C005232B1 /* ViewController.m in Sources */,
+				642F6979180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		642F697C180C28E6005232B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642F698F180C28E7005232B1 /* ProvaCocoaPodTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		642F6987180C28E6005232B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 642F695F180C28E6005232B1 /* ProvaCocoaPod */;
+			targetProxy = 642F6986180C28E6005232B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		642F696E180C28E6005232B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				642F696F180C28E6005232B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		642F698B180C28E7005232B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				642F698C180C28E7005232B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		642F6990180C28E7005232B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		642F6991180C28E7005232B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		642F6993180C28E7005232B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD42DBBD95A74CD681B91634 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProvaCocoaPod/ProvaCocoaPod-Prefix.pch";
+				INFOPLIST_FILE = "ProvaCocoaPod/ProvaCocoaPod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		642F6994180C28E7005232B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD42DBBD95A74CD681B91634 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProvaCocoaPod/ProvaCocoaPod-Prefix.pch";
+				INFOPLIST_FILE = "ProvaCocoaPod/ProvaCocoaPod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		642F6996180C28E7005232B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProvaCocoaPod.app/ProvaCocoaPod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProvaCocoaPod/ProvaCocoaPod-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ProvaCocoaPodTests/ProvaCocoaPodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		642F6997180C28E7005232B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProvaCocoaPod.app/ProvaCocoaPod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProvaCocoaPod/ProvaCocoaPod-Prefix.pch";
+				INFOPLIST_FILE = "ProvaCocoaPodTests/ProvaCocoaPodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		642F695B180C28E6005232B1 /* Build configuration list for PBXProject "ProvaCocoaPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642F6990180C28E7005232B1 /* Debug */,
+				642F6991180C28E7005232B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		642F6992180C28E7005232B1 /* Build configuration list for PBXNativeTarget "ProvaCocoaPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642F6993180C28E7005232B1 /* Debug */,
+				642F6994180C28E7005232B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		642F6995180C28E7005232B1 /* Build configuration list for PBXNativeTarget "ProvaCocoaPodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642F6996180C28E7005232B1 /* Debug */,
+				642F6997180C28E7005232B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		642F6977180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				642F6978180C28E6005232B1 /* ProvaCocoaPod.xcdatamodel */,
+			);
+			currentVersion = 642F6978180C28E6005232B1 /* ProvaCocoaPod.xcdatamodel */;
+			path = ProvaCocoaPod.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 642F6958180C28E6005232B1 /* Project object */;
+}
