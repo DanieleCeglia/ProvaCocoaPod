@@ -86,11 +86,16 @@
 	// Preparo operazione con managedObejctContext che permetterà a RestKit di creare una entry in CoreData.
 	// Nota: Il managed object context è inizializzato in AppDelegate con un concurrency type NSMainQueueConcurrencyType
 	// perché RestKit userà [NSManagedObjectContext -performBlockAndWait:]
-	RKManagedObjectRequestOperation *operation = [objectManager managedObjectRequestOperationWithRequest:[NSURLRequest requestWithURL:[objectManager.baseURL URLByAppendingPathComponent:@"/asd"]] managedObjectContext:appDelegate.managedObjectContext success:^(RKObjectRequestOperation *operaton, RKMappingResult *mappingResult) {
-		NSLog(@"Mappatura riuscita: %@", mappingResult);
-	} failure:^(RKObjectRequestOperation *operaton, NSError *error) {
-		NSLog (@"Mappattura FALLITA: %@ \n\nErrore: %@", operaton, error);
-	}];
+	RKManagedObjectRequestOperation *operation = [objectManager managedObjectRequestOperationWithRequest:[NSURLRequest requestWithURL:[objectManager.baseURL URLByAppendingPathComponent:@"/asd"]]
+                                                                                    managedObjectContext:appDelegate.managedObjectContext
+                                                                                                 success:^(RKObjectRequestOperation *operaton, RKMappingResult *mappingResult)
+                                                                                                        {
+                                                                                                            NSLog(@"Mappatura riuscita: %@", mappingResult);
+                                                                                                        }
+                                                                                                 failure:^(RKObjectRequestOperation *operaton, NSError *error)
+                                                                                                        {
+                                                                                                            NSLog (@"Mappattura FALLITA: %@ \n\nErrore: %@", operaton, error);
+                                                                                                        }];
 	
 	[objectManager enqueueObjectRequestOperation:operation];
 }
