@@ -80,8 +80,9 @@
                                                           @"publication_date" : @"dataPubblicazione"}];
     articoliMapping.identificationAttributes = @[@"idArticolo"];
 	
-	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articoliMapping method:RKRequestMethodGET pathPattern:nil keyPath:@"article" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-	[objectManager addResponseDescriptor:responseDescriptor];
+	RKResponseDescriptor *articleDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articoliMapping method:RKRequestMethodGET pathPattern:nil keyPath:@"article" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+	RKResponseDescriptor *authorDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:autoriMapping method:RKRequestMethodGET pathPattern:nil keyPath:@"authors" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+	[objectManager addResponseDescriptorsFromArray:@[articleDescriptor, authorDescriptor]];
 
 	// Preparo operazione con managedObejctContext che permetterà a RestKit di creare una entry in CoreData.
 	// Nota: Il managed object context è inizializzato in AppDelegate con un concurrency type NSMainQueueConcurrencyType
