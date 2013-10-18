@@ -26,6 +26,8 @@
 		642F698F180C28E7005232B1 /* ProvaCocoaPodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F698E180C28E7005232B1 /* ProvaCocoaPodTests.m */; };
 		642F6999180C2A63005232B1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F6998180C2A63005232B1 /* Storyboard.storyboard */; };
 		642F699C180C2B7C005232B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642F699B180C2B7C005232B1 /* ViewController.m */; };
+		64C8C59A18111420003F53F7 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C8C59818111420003F53F7 /* CoreDataHelper.m */; };
+		64C8C59B18111420003F53F7 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C8C59818111420003F53F7 /* CoreDataHelper.m */; };
 		8C1C854948844421986397F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FC12F66FD14DB7B074F2FD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		642F6998180C2A63005232B1 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		642F699A180C2B7C005232B1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		642F699B180C2B7C005232B1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		64C8C59818111420003F53F7 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		64C8C59918111420003F53F7 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		D5FC12F66FD14DB7B074F2FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD42DBBD95A74CD681B91634 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,8 @@
 			children = (
 				642F6974180C28E6005232B1 /* AppDelegate.h */,
 				642F6975180C28E6005232B1 /* AppDelegate.m */,
+				64C8C59818111420003F53F7 /* CoreDataHelper.m */,
+				64C8C59918111420003F53F7 /* CoreDataHelper.h */,
 				642F697A180C28E6005232B1 /* Images.xcassets */,
 				642F6977180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld */,
 				642F696C180C28E6005232B1 /* Supporting Files */,
@@ -314,6 +320,7 @@
 				642F6972180C28E6005232B1 /* main.m in Sources */,
 				642F699C180C2B7C005232B1 /* ViewController.m in Sources */,
 				642F6979180C28E6005232B1 /* ProvaCocoaPod.xcdatamodeld in Sources */,
+				64C8C59A18111420003F53F7 /* CoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C8C59B18111420003F53F7 /* CoreDataHelper.m in Sources */,
 				642F698F180C28E7005232B1 /* ProvaCocoaPodTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

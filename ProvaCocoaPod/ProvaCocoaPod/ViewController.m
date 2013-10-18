@@ -8,11 +8,16 @@
 
 #import "ViewController.h"
 #import <RestKit/RestKit.h>
-
 #import "AppDelegate.h"
+#import "CoreDataHelper.h"
 
 @interface ViewController ()
-
+{
+    AppDelegate *appDelegate;
+    NSManagedObjectModel *managedObjectModel;
+    NSMutableArray *listaArticoli;
+    NSMutableArray *listaAutori;
+}
 @end
 
 @implementation ViewController
@@ -30,6 +35,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+	appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
+    managedObjectModel = appDelegate.managedObjectModel;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,8 +59,6 @@
 	// Il managed object model e context sono già gestiti dai metodi dichiarati nell'app delegate
 	// quindi qui lo recuperiamo. Sarebbe meglio usare un singleton tipo https://gist.github.com/rojotek/2362546
 	// invece dell'app delegate per metodi relativi a core data.
-	AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
-    NSManagedObjectModel *managedObjectModel = appDelegate.managedObjectModel;
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
     objectManager.managedObjectStore = managedObjectStore;
     
@@ -92,6 +98,15 @@
                                                                                                  success:^(RKObjectRequestOperation *operaton, RKMappingResult *mappingResult)
                                                                                                         {
                                                                                                             NSLog(@"Mappatura riuscita: %@", mappingResult);
+                                                                                                            
+                                                                                                            //NSPredicate *predicato = [NSPredicate predicateWithFormat:@"hot == YES"];
+                                                                                                            listaArticoli = [CoreDataHelper ottieniOggettiPerEntita:@"Articoli" conChiaveOrdinamento:@"idArticolo" eOrdinamentoCrescente:YES eContesto:[appDelegate managedObjectContext]];
+                                                                                                            
+                                                                                                            NSLog(@"listaArticoli: %@", listaArticoli);
+                                                                                                            
+                                                                                                            listaAutori = [CoreDataHelper ottieniOggettiPerEntita:@"Autori" conChiaveOrdinamento:@"idAutore" eOrdinamentoCrescente:YES eContesto:[appDelegate managedObjectContext]];
+                                                                                                            
+                                                                                                            NSLog(@"listaAutori: %@", listaAutori);
                                                                                                         }
                                                                                                  failure:^(RKObjectRequestOperation *operaton, NSError *error)
                                                                                                         {
